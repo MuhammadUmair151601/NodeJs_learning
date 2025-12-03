@@ -52,4 +52,17 @@
 //   res.json(users)
 // })
 
+// *****************redirect method is used to redirect someone to other page:
+// const express = require('express')
+// const app = express()
+// const PORT = 3002;
+// app.listen(PORT,()=>{
+//   console.log(`port ${PORT} successfully connected:`)
+// });
 
+// app.get('/about',(req,res)=>{
+//   res.redirect('..') 
+//   // 301 will redirect it to permanent redirection:
+// })
+// it will open google chrome page on about
+// '..' will show us the page which was opened before:
