@@ -65,4 +65,24 @@
 //   // 301 will redirect it to permanent redirection:
 // })
 // it will open google chrome page on about
-// '..' will show us the page which was opened before:
+// '..' will show us the page which was opened before:   
+
+
+// **********************render method is used to render the whole template file existin in the project:
+// const express = require('express');
+// const app = express();
+// const PORT = 3001;
+
+// // set view engine:
+// app.set('view engine', 'ejs')
+
+// // create server:
+// app.listen(PORT,()=>{
+//   console.log(`port ${PORT} is successfully connected:`)
+// });
+
+// // render
+// app.get('/user',(req,res)=>{
+//   res.render('user')
+// })
+
