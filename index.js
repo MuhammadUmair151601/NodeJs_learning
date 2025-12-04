@@ -86,3 +86,18 @@
 //   res.render('user')
 // })
 
+// ****************downloading files
+
+// const express = require('express')
+// const app = express();
+// const PORT = 3001;
+
+// app.set('./downloads/layers.png')
+
+// app.listen(PORT,()=>{
+//   console.log(`port ${PORT} successfully connected:`)
+// })
+
+// app.get('/downloads',(req,res)=>{
+//   res.download('./downloads/layers.png')
+// })
