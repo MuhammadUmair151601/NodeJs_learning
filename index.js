@@ -103,16 +103,22 @@
 // })
 
 // ****************sendfile is also same as download but it gives you option to download:
-const express = require('express');
-const app = express();
-const PORT = 3001;
+// const express = require('express');
+// const app = express();
+// const PORT = 3001;
 
-app.set('./downloads/layers')
+// app.set('./downloads/layers')
 
-app.listen(PORT,()=>{
-  console.log(`port ${PORT} successfully connected:`)
-});
+// app.listen(PORT,()=>{
+//   console.log(`port ${PORT} successfully connected:`)
+// });
 
-app.get('/downloads',(req,res)=>{
-  res.sendFile(__dirname + '/downloads/layers.png')
-})
+// app.get('/downloads',(req,res)=>{
+//   res.sendFile(__dirname + '/downloads/layers.png')
+// })
+
+// except that:
+// res.sendstatus 404 200 504 etc
+// res.set
+// res.get
+// res.send
