@@ -122,3 +122,22 @@
 // res.set
 // res.get
 // res.send
+
+// *******************EJS templates:
+import express from 'express'
+const app = express();
+
+app.set('view engine','ejs')
+
+app.get('/',(req,res)=>{
+  res.send('<h1>hello everyone</h1>')
+})
+
+app.get('/about',(req,res)=>{
+  res.render('user')
+})
+
+app.listen(3000,()=>{
+  console.log("port successfully connected:")
+})
+
