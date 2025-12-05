@@ -124,20 +124,38 @@
 // res.send
 
 // *******************EJS templates:
+// import express from 'express'
+// const app = express();
+
+// app.set('view engine','ejs')
+
+// app.get('/',(req,res)=>{
+//   res.send('<h1>hello everyone</h1>')
+// })
+
+// app.get('/about',(req,res)=>{
+//   res.render('user')
+// })
+
+// app.listen(3000,()=>{
+//   console.log("port successfully connected:")
+// })
+
+// ****************** implementing changes in HTML file:
 import express from 'express'
-const app = express();
+const app = express()
+const PORT = 3000;
 
 app.set('view engine','ejs')
 
 app.get('/',(req,res)=>{
-  res.send('<h1>hello everyone</h1>')
+  res.send("<h1>This is Home page:</h1>")
 })
 
 app.get('/about',(req,res)=>{
-  res.render('user')
+  res.render('user' ,{title:'about', message:"welcome to ejs"})
 })
 
-app.listen(3000,()=>{
-  console.log("port successfully connected:")
+app.listen(PORT,()=>{
+  console.log(`port ${PORT} successfully connected:` )
 })
-
