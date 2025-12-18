@@ -1,6 +1,17 @@
 const express = require ("express")
 const app = express();
 
+// run before the request is accepted and response is back on the way:
+app.use((req,res,next)=>{
+  console.log("request chala")
+  next();
+})
+
+app.use((req,res,next)=>{
+  console.log("request phir chala......")
+  next();
+})
+
 app.get('/',(req,res)=>{
   res.send("this is home page:")
 })
