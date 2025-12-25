@@ -1,30 +1,19 @@
-const express = require ("express")
+const express = require ('express')
 const app = express();
 
-// run before the request is accepted and response is back on the way:
-app.use((req,res,next)=>{
-  console.log("request chala")
-  next();
+// For taking forms
+app.use(express.json())
+app.use(express.urlencoded({extended: true}))
+
+// setup ejs for view engine as middleware:
+app.set('view engine', 'ejs');
+
+
+app.get('/', (req,res)=>{
+  res.render("index")
 })
 
-app.use((req,res,next)=>{
-  console.log("request phir chala......")
-  next();
+PORT = 3000;
+app.listen(PORT, (req,res)=>{
+  console.log("server connected:")
 })
-
-app.get('/',(req,res)=>{
-  res.send("this is home page:")
-})
-
-app.get('/profile', (req,res)=>{
-  res.send("this is profile page:")
-})
-
-app.get('/about', (req,res)=>{
-  res.send("this is about page:")
-})
-
-const PORT = 3000;
-app.listen(PORT,(req,res)=>{
-  console.log('server connected successfully:')
-});
